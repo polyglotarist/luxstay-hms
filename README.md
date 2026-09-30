@@ -62,7 +62,7 @@ src/main/java/com/luxstay/hms/
 - [x] Step 2.1 – Generate project with Spring Initializr
 - [x] Step 2.6 – Add Swagger, JWT, MapStruct and REST Assured dependencies
 - [x] Step 2.9 – Add README
-- [ ] Step 2.10 – Protect `main` branch, PR and issue templates
+- [x] Step 2.10 – Protect `main` branch, PR and issue templates
 - [ ] Step 3 – PostgreSQL with Docker Compose and Flyway
 - [ ] Step 4 – CI with GitHub Actions and 80% coverage gate
 - [ ] Step 5 – Cross-cutting code: base entity, errors, logging, Swagger config
