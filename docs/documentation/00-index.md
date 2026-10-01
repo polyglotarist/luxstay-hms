@@ -11,7 +11,7 @@ Step-by-step instructions to build this app from an empty folder. Follow them in
 
 **Core**
 
-4. 📝 [Foundation code](04-foundation.md): base entity, error handling, Swagger
+4. ✅ [Foundation code](04-foundation.md): base entity, error handling, Swagger
 5. 📝 [Rooms module](05-rooms.md): the recipe every module follows
 6. 📝 [CI with GitHub Actions](06-ci-github-actions.md): tests on every PR, 80% coverage gate
 7. 📝 [JWT security](07-jwt-security.md): login, roles, protected endpoints
