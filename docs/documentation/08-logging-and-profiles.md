@@ -1,4 +1,4 @@
-# Cheat Sheet 8 — Logging, health checks and the production profile
+# Step 8 Documentation — Logging, health checks and the production profile
 
 Every log line of a request carries one correlation ID. Production writes JSON logs and reads its settings from environment variables.
 

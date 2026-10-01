@@ -1,6 +1,6 @@
-# LuxStay HMS — Cheat Sheets
+# LuxStay HMS — Documentation
 
-Step-by-step instructions to build this app from an empty folder. Follow them in order: **sheet number = step number = the `Step N` in commit messages**.
+Step-by-step instructions to build this app from an empty folder. Follow them in order: **page number = step number = the `Step N` in commit messages**.
 
 ✅ = built and verified · 📝 = planned (corrected when that step is built)
 

@@ -1,4 +1,4 @@
-# Cheat Sheet 14 — Housekeeping
+# Step 14 Documentation — Housekeeping
 
 Cleaning tasks appear automatically when guests check out and every morning for occupied rooms. Managers assign them, housekeepers work them, and an inspected room becomes sellable again.
 

@@ -1,4 +1,4 @@
-# Cheat Sheet 11 — Billing: folios, charges and payments
+# Step 11 Documentation — Billing: folios, charges and payments
 
 Every reservation gets a **folio** (the guest's bill). Any outlet can post charges to it; tax is added automatically; payments go through a simulated card gateway.
 

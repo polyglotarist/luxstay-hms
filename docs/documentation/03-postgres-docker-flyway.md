@@ -1,4 +1,4 @@
-# Cheat Sheet 3 — PostgreSQL with Docker Compose and Flyway
+# Step 3 Documentation — PostgreSQL with Docker Compose and Flyway
 
 1. In your terminal, create a branch and check that port 5432 is free:
    ```bash

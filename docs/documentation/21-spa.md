@@ -1,4 +1,4 @@
-# Cheat Sheet 21 — Spa and amenities (Phase 2)
+# Step 21 Documentation — Spa and amenities (Phase 2)
 
 Treatments with therapists and treatment rooms, booked without double-booking either. This reuses the overlap check you built for reservations.
 
@@ -46,7 +46,7 @@ Treatments with therapists and treatment rooms, booked without double-booking ei
    ```
    - *Same idea as `no_double_booking` in Step 10, but on time ranges (`tsrange`) per therapist.*
 
-3. Build the module with the usual recipe (Cheat Sheet 5):
+3. Build the module with the usual recipe (Step 5 documentation):
    - Enum `SpaBookingStatus { BOOKED, COMPLETED, CANCELLED }`
    - Entities `SpaTreatment`, `SpaBooking`; repositories; DTOs `SpaBookingRequest(treatmentId, therapistId, guestId, reservationId, startsAt)` and `SpaBookingResponse`
    - `SpaService`: `getTreatments()`, `book(request)`, `complete(id)`, `cancel(id)`, `getDay(date)`

@@ -1,4 +1,4 @@
-# Cheat Sheet 16 — End-to-end tests and coverage top-up
+# Step 16 Documentation — End-to-end tests and coverage top-up
 
 One test drives a whole guest stay through real HTTP calls against a real database, the way a user would. Then fill any coverage gaps.
 

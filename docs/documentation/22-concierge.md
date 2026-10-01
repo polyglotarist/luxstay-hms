@@ -1,4 +1,4 @@
-# Cheat Sheet 22 — Concierge requests (Phase 2)
+# Step 22 Documentation — Concierge requests (Phase 2)
 
 Track guest requests (airport transfers, tours, theatre tickets, restaurant bookings elsewhere) from "new" to "done", with due times.
 
@@ -28,7 +28,7 @@ Track guest requests (airport transfers, tours, theatre tickets, restaurant book
    CREATE INDEX idx_concierge_status_due ON concierge_request (status, due_at);
    ```
 
-3. Build the module with the usual recipe (Cheat Sheet 5):
+3. Build the module with the usual recipe (Step 5 documentation):
    - Enums `ConciergeRequestType { TRANSFER, TOUR, TICKETS, RESTAURANT, LIMOUSINE, OTHER }` and `ConciergeStatus { NEW, IN_PROGRESS, DONE, CANCELLED }`
    - Entity, repository, DTOs, mapper, `ConciergeService`, `ConciergeController` at `/api/v1/concierge/requests`
    - Roles: `ADMIN`, `MANAGER`, `CONCIERGE`, `RECEPTIONIST`

@@ -1,4 +1,4 @@
-# Cheat Sheet 15 — Room service and restaurant
+# Step 15 Documentation — Room service and restaurant
 
 A menu, in-room orders that move from kitchen to door and land on the guest's bill, and restaurant table bookings with a capacity limit.
 

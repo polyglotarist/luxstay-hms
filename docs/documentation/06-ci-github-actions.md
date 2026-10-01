@@ -1,4 +1,4 @@
-# Cheat Sheet 6 — CI with GitHub Actions and the 80% coverage gate
+# Step 6 Documentation — CI with GitHub Actions and the 80% coverage gate
 
 Every pull request automatically builds the app, runs all tests and fails if line coverage drops below 80%.
 

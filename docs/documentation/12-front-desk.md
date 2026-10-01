@@ -1,4 +1,4 @@
-# Cheat Sheet 12 — Front desk: check-in, check-out and room changes
+# Step 12 Documentation — Front desk: check-in, check-out and room changes
 
 The rules that tie rooms, reservations and bills together: check in only to a clean room, check out only with a paid bill, and tell housekeeping when a room is vacated.
 

@@ -1,4 +1,4 @@
-# Cheat Sheet 17 — Production Docker image
+# Step 17 Documentation — Production Docker image
 
 Package the app as a small, secure container image: the exact thing AWS will run. Then run the whole system (app + database) with one command.
 

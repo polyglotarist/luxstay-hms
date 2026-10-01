@@ -1,4 +1,4 @@
-# Cheat Sheet 5 — Rooms module (the recipe every module follows)
+# Step 5 Documentation — Rooms module (the recipe every module follows)
 
 Your first complete feature: entity → repository → DTOs → mapper → service → controller → tests. Every later module repeats this order.
 

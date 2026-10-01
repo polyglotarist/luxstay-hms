@@ -1,4 +1,4 @@
-# Cheat Sheet 13 — Staff and shifts
+# Step 13 Documentation — Staff and shifts
 
 Employees belong to departments, are linked to their login, and work shifts. Housekeeping tasks (Step 14) are assigned to these employees.
 

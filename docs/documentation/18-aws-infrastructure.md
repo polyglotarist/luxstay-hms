@@ -1,4 +1,4 @@
-# Cheat Sheet 18 — AWS infrastructure with Terraform
+# Step 18 Documentation — AWS infrastructure with Terraform
 
 Describe the whole AWS setup in code, so one command creates it and another destroys it: network, database, container registry, load balancer, ECS service, secrets, logs and a deploy role for GitHub.
 
@@ -22,7 +22,7 @@ Internet → Load balancer (public) → ECS Fargate task (Spring Boot) → RDS P
    aws configure                      # access key of your IAM admin user, region us-east-1
    aws sts get-caller-identity        # prints your account id
    ```
-   - *Never use the AWS **root** user's keys; use the IAM admin user from Cheat Sheet 1.*
+   - *Never use the AWS **root** user's keys; use the IAM admin user from the Step 1 documentation.*
 
 3. Let the app create its first admin in production (there are no dev users there). Create `config/AdminBootstrap.java`:
    ```java

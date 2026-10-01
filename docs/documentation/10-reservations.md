@@ -1,4 +1,4 @@
-# Cheat Sheet 10 — Reservations and availability
+# Step 10 Documentation — Reservations and availability
 
 Search free rooms, book them without ever double-booking (even when two people click at the same time), and cancel with a late-cancellation fee.
 

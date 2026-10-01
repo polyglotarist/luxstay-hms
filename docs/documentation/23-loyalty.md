@@ -1,4 +1,4 @@
-# Cheat Sheet 23 — Loyalty programme (Phase 2)
+# Step 23 Documentation — Loyalty programme (Phase 2)
 
 Guests earn points when they check out, move up tiers automatically, and redeem points against their bill.
 

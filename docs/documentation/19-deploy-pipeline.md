@@ -1,4 +1,4 @@
-# Cheat Sheet 19 — Automatic deployment with GitHub Actions
+# Step 19 Documentation — Automatic deployment with GitHub Actions
 
 Every merge to `main` is tested, packaged and deployed to staging automatically. A version tag (`v1.0.0`) deploys to production after your approval.
 

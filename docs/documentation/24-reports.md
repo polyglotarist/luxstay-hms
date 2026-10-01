@@ -1,4 +1,4 @@
-# Cheat Sheet 24 — Management reports (Phase 2)
+# Step 24 Documentation — Management reports (Phase 2)
 
 The three numbers every hotel manager checks daily: **occupancy**, **ADR** (average daily rate) and **RevPAR** (revenue per available room), plus revenue by outlet.
 
@@ -133,4 +133,4 @@ The three numbers every hotel manager checks daily: **occupancy**, **ADR** (aver
    - Occupancy = occupied / available; ADR = revenue / occupied; RevPAR = revenue / available"
    ```
 
-8. Release it: tag `v1.1.0` (Cheat Sheet 20, steps 9–11) to ship Phase 2 to production.
+8. Release it: tag `v1.1.0` (Step 20 documentation, items 9–11) to ship Phase 2 to production.

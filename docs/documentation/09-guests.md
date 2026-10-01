@@ -1,4 +1,4 @@
-# Cheat Sheet 9 — Guest profiles (CRM)
+# Step 9 Documentation — Guest profiles (CRM)
 
 Store guests with their preferences, search them, and anonymise them on request (GDPR-style "right to be forgotten").
 

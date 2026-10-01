@@ -1,4 +1,4 @@
-# Cheat Sheet 4 — Foundation code
+# Step 4 Documentation — Foundation code
 
 Shared code every module uses: a base class for entities, error handling, Swagger setup and temporary open security.
 

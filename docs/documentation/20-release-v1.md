@@ -1,4 +1,4 @@
-# Cheat Sheet 20 — Production and release v1.0.0
+# Step 20 Documentation — Production and release v1.0.0
 
 Create the production environment, document the project, tag `v1.0.0`, approve the production deployment and publish the release.
 
@@ -101,4 +101,4 @@ Create the production environment, document the project, tag `v1.0.0`, approve t
 
 12. Record a 10-minute demo of the full guest journey in Swagger, from login to the housekeeping task after check-out. Link it in the README.
 
-13. Now you have a tested, documented hotel management system running on AWS, with a commit history and cheat sheets that show how it was built step by step!
+13. Now you have a tested, documented hotel management system running on AWS, with a commit history and documentation that show how it was built step by step!

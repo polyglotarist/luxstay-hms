@@ -1,4 +1,4 @@
-# Cheat Sheet 1 — Machine setup (macOS)
+# Step 1 Documentation — Machine setup (macOS)
 
 1. Install these tools:
    - **Amazon Corretto 21** (Java): aws.amazon.com/corretto → macOS aarch64 `.pkg`, or `brew install --cask corretto@21`

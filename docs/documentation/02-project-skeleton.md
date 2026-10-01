@@ -1,4 +1,4 @@
-# Cheat Sheet 2 — Spring Boot project skeleton on GitHub
+# Step 2 Documentation — Spring Boot project skeleton on GitHub
 
 1. On **start.spring.io**, choose:
    - Maven · Java · Spring Boot **4.1.1** (newest without SNAPSHOT/M) · Jar · **YAML** · Java **21**

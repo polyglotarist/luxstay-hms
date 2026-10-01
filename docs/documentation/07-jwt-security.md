@@ -1,4 +1,4 @@
-# Cheat Sheet 7 — JWT security, users and roles
+# Step 7 Documentation — JWT security, users and roles
 
 Users log in with email and password, receive a token (JWT), and send it with every request. Each endpoint allows only certain roles.
 
