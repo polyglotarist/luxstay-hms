@@ -35,8 +35,11 @@ cd luxstay-hms
 ./mvnw compile
 ```
 
-Running the application and the database with Docker Compose will be documented here once Step 3 is complete.
-
+```bash
+   cp .env.example .env              # then set POSTGRES_PASSWORD
+   docker compose up -d postgres     # start PostgreSQL 16
+   ./mvnw spring-boot:run            # Flyway creates and seeds the tables
+```
 ## Project structure
 
 ```
@@ -63,7 +66,7 @@ src/main/java/com/luxstay/hms/
 - [x] Step 2.6 – Add Swagger, JWT, MapStruct and REST Assured dependencies
 - [x] Step 2.9 – Add README
 - [x] Step 2.10 – Protect `main` branch, PR and issue templates
-- [ ] Step 3 – PostgreSQL with Docker Compose and Flyway
+- [x] Step 3 – PostgreSQL with Docker Compose and Flyway
 - [ ] Step 4 – CI with GitHub Actions and 80% coverage gate
 - [ ] Step 5 – Cross-cutting code: base entity, errors, logging, Swagger config
 - [ ] Steps 6–14 – Security and hotel modules

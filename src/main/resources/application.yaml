@@ -1,3 +1,7 @@
 spring:
   application:
-    name: hms
+    name: luxstay-hms
+  config:
+    import: optional:file:.env[.properties]
+  profiles:
+    default: local
