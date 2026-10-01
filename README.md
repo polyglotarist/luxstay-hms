@@ -62,17 +62,29 @@ src/main/java/com/luxstay/hms/
 
 ## Progress
 
-- [x] Step 2.1 – Generate project with Spring Initializr
-- [x] Step 2.6 – Add Swagger, JWT, MapStruct and REST Assured dependencies
-- [x] Step 2.9 – Add README
-- [x] Step 2.10 – Protect `main` branch, PR and issue templates
+Step-by-step build instructions: [docs/cheat-sheets](docs/cheat-sheets/00-index.md)
+
+- [x] Step 1 – Machine setup
+- [x] Step 2 – Project skeleton, GitHub, PR templates
 - [x] Step 3 – PostgreSQL with Docker Compose and Flyway
-- [ ] Step 4 – CI with GitHub Actions and 80% coverage gate
-- [ ] Step 5 – Cross-cutting code: base entity, errors, logging, Swagger config
-- [ ] Steps 6–14 – Security and hotel modules
-- [ ] Steps 15–16 – End-to-end tests and production Docker image
-- [ ] Steps 17–18 – AWS deployment
-- [ ] Step 19 – Release v1.0.0
+- [ ] Step 4 – Foundation code
+- [ ] Step 5 – Rooms module
+- [ ] Step 6 – CI with GitHub Actions and 80% coverage gate
+- [ ] Step 7 – JWT security and roles
+- [ ] Step 8 – Logging and production profile
+- [ ] Step 9 – Guests
+- [ ] Step 10 – Reservations
+- [ ] Step 11 – Billing
+- [ ] Step 12 – Front desk
+- [ ] Step 13 – Staff
+- [ ] Step 14 – Housekeeping
+- [ ] Step 15 – Room service and restaurant
+- [ ] Step 16 – End-to-end tests
+- [ ] Step 17 – Production Docker image
+- [ ] Step 18 – AWS infrastructure
+- [ ] Step 19 – Deploy pipeline
+- [ ] Step 20 – Release v1.0.0
+- [ ] Steps 21–24 – Phase 2: spa, concierge, loyalty, reports
 
 ## Commit convention
 
