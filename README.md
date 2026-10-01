@@ -66,7 +66,7 @@ Step-by-step build instructions: [docs/documentation](docs/documentation/00-inde
 - [x] Step 1 – Machine setup
 - [x] Step 2 – Project skeleton, GitHub, PR templates
 - [x] Step 3 – PostgreSQL with Docker Compose and Flyway
-- [ ] Step 4 – Foundation code
+- [x] Step 4 – Foundation code
 - [ ] Step 5 – Rooms module
 - [ ] Step 6 – CI with GitHub Actions and 80% coverage gate
 - [ ] Step 7 – JWT security and roles
