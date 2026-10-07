@@ -1,4 +1,4 @@
-# Step 5 Documentation — Rooms module (the recipe every module follows)
+# Step 5 Documentation — Rooms module (the recipe every module follows) ✅
 
 Your first complete feature: entity → repository → DTOs → mapper → service → controller → tests. Every later module repeats this order.
 
@@ -10,7 +10,7 @@ The tables already exist from Step 3 (`room_type`, `room`), so there's no migrat
    git switch -c feature/step-5-rooms
    ```
 
-2. In `pom.xml`, make sure these test dependencies are present (add any that are missing, without a version), then **Sync**:
+2. Check that `pom.xml` already has these test dependencies (Initializr added them in Step 2). Add any that are missing, without a version, then **Sync**:
    ```xml
    <dependency>
        <groupId>org.springframework.boot</groupId>
@@ -533,12 +533,20 @@ The tables already exist from Step 3 (`room_type`, `room`), so there's no migrat
     }
     ```
     - *This runs Flyway against a real PostgreSQL started by Testcontainers, so Docker Desktop must be running.*
+    - *If it fails with `TestcontainersConfiguration is not public`, open `src/test/java/com/luxstay/hms/TestcontainersConfiguration.java` and change `class` to `public class`. Initializr makes it package-private, and Java has no sub-package access.*
     - *Names ending in `IT` are integration tests; Step 6 makes Maven run them in `verify`.*
 
-16. Run all tests: right-click `src/test/java` → **Run 'All Tests'**.
-    - *All green. The first run downloads the PostgreSQL test image.*
+16. Run all tests from the Terminal (Docker Desktop must be running; the app doesn't need to be):
+    ```bash
+    ./mvnw clean test -Dtest='*Test,*Tests,*IT'
+    ```
+    - *Expect `Tests run: 15, Failures: 0, Errors: 0`: 6 unit, 6 controller, 2 repository, 1 app start-up (`HmsApplicationTests`).*
+    - *The quotes stop zsh from expanding `*`. Plain `./mvnw test` skips `*IT` classes until Step 6 adds Failsafe.*
+    - *Run a single class with `-Dtest=RoomServiceImplTest`.*
+    - *If you see `Cannot find implementation for …Mapper` or `No qualifying bean of type …Mapper`, the MapStruct-generated classes are missing from `target/` (IntelliJ and Maven share it). Stop the app and use `clean`, as above.*
+    - *The first run pulls `testcontainers/ryuk` and `postgres:16`.*
 
-17. Commit:
+17. Commit (or, as done while building, commit each piece as it works: entities, repositories, DTOs, mapper, service, controllers, each test class):
     ```bash
     git add src pom.xml
     git commit -m "feat: Step 5 – add rooms module with entity, service, controller and tests" -m "- GET/POST /api/v1/rooms, GET /{id}, PATCH /{id}/status, GET /api/v1/room-types
