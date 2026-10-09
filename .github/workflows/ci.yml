@@ -1,0 +1,33 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v5
+
+      - name: Set up Java 21 (Corretto)
+        uses: actions/setup-java@v5
+        with:
+          distribution: corretto
+          java-version: '21'
+          cache: maven
+
+      - name: Build, test and check coverage
+        run: ./mvnw -B verify
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v6
+        with:
+          name: jacoco-report
+          path: target/site/jacoco
