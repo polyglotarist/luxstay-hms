@@ -1,5 +1,7 @@
 # LuxStay HMS
 
+![CI](https://github.com/polyglotarist/luxstay-hms/actions/workflows/ci.yml/badge.svg)
+
 A backend REST platform that simulates the software of a modern luxury hotel: reservations, guest profiles, rooms, front desk, housekeeping, billing, dining and more.
 
 > **Status:** early development — project skeleton and dependencies are in place. See the [progress checklist](#progress).
@@ -68,7 +70,7 @@ Step-by-step build instructions: [docs/documentation](docs/documentation/00-inde
 - [x] Step 3 – PostgreSQL with Docker Compose and Flyway
 - [x] Step 4 – Foundation code
 - [x] Step 5 – Rooms module
-- [ ] Step 6 – CI with GitHub Actions and 80% coverage gate
+- [x] Step 6 – CI with GitHub Actions and 80% coverage gate
 - [ ] Step 7 – JWT security and roles
 - [ ] Step 8 – Logging and production profile
 - [ ] Step 9 – Guests

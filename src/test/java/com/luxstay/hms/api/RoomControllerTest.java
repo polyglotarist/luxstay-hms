@@ -13,6 +13,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.webmvc.test.autoconfigure.WebMvcTest;
 import org.springframework.context.annotation.Import;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
@@ -21,6 +23,7 @@ import java.math.BigDecimal;
 import java.util.List;
 
 import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.patch;
@@ -80,6 +83,31 @@ class RoomControllerTest {
 
         mockMvc.perform(get("/api/v1/rooms/99"))
                 .andExpect(status().isNotFound());
+    }
+
+    @Test
+    void getAll_withStatus_returnsPageOfRooms() throws Exception {
+        when(roomService.getAll(eq(RoomStatus.VACANT_CLEAN), any(Pageable.class))).thenReturn(
+                new PageImpl<>(List.of(
+                        new RoomResponse(1L, "101", 1, "CITY", RoomStatus.VACANT_CLEAN, "DLX", "Deluxe King"))));
+
+        mockMvc.perform(get("/api/v1/rooms").param("status", "VACANT_CLEAN").param("size", "5"))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.content[0].number").value("101"));
+    }
+
+    @Test
+    void updateStatus_withValidStatus_returns200() throws Exception {
+        when(roomService.updateStatus(1L, RoomStatus.OUT_OF_ORDER)).thenReturn(
+                new RoomResponse(1L, "101", 1, "CITY", RoomStatus.OUT_OF_ORDER, "DLX", "Deluxe King"));
+
+        mockMvc.perform(patch("/api/v1/rooms/1/status")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+                    {"status":"OUT_OF_ORDER"}
+                    """))
+                .andExpect(status().isOk())
+                .andExpect(jsonPath("$.status").value("OUT_OF_ORDER"));
     }
 
     @Test
