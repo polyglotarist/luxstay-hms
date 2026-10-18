@@ -30,7 +30,7 @@
 		<java.version>21</java.version>
 		<springdoc.version>3.0.0</springdoc.version>
 		<mapstruct.version>1.6.3</mapstruct.version>
-		<rest-assured.version>6.0.1</rest-assured.version>
+		<rest-assured.version>6.1.0</rest-assured.version>
 	</properties>
 	<dependencies>
 		<dependency>
