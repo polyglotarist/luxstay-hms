@@ -71,7 +71,7 @@ Step-by-step build instructions: [docs/documentation](docs/documentation/00-inde
 - [x] Step 4 – Foundation code
 - [x] Step 5 – Rooms module
 - [x] Step 6 – CI with GitHub Actions and 80% coverage gate
-- [ ] Step 7 – JWT security and roles
+- [x] Step 7 – JWT security and roles
 - [ ] Step 8 – Logging and production profile
 - [ ] Step 9 – Guests
 - [ ] Step 10 – Reservations
