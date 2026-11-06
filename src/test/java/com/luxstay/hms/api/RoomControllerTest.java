@@ -18,6 +18,9 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.http.MediaType;
 import org.springframework.test.context.bean.override.mockito.MockitoBean;
 import org.springframework.test.web.servlet.MockMvc;
+import com.luxstay.hms.config.JwtConfig;
+import org.springframework.security.test.context.support.WithAnonymousUser;
+import org.springframework.security.test.context.support.WithMockUser;
 
 import java.math.BigDecimal;
 import java.util.List;
@@ -33,7 +36,8 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest({RoomController.class, RoomTypeController.class})
-@Import(SecurityConfig.class)
+@Import({SecurityConfig.class, JwtConfig.class})
+@WithMockUser(roles = "MANAGER")
 class RoomControllerTest {
 
     @Autowired MockMvc mockMvc;
@@ -128,5 +132,23 @@ class RoomControllerTest {
         mockMvc.perform(get("/api/v1/room-types"))
                 .andExpect(status().isOk())
                 .andExpect(jsonPath("$[0].code").value("DLX"));
+    }
+
+    @Test
+    @WithAnonymousUser
+    void getAll_withoutToken_returns401() throws Exception {
+        mockMvc.perform(get("/api/v1/rooms"))
+                .andExpect(status().isUnauthorized());
+    }
+
+    @Test
+    @WithMockUser(roles = "GUEST")
+    void create_asGuest_returns403() throws Exception {
+        mockMvc.perform(post("/api/v1/rooms")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content("""
+                    {"number":"613","floor":6,"roomTypeId":1}
+                    """))
+                .andExpect(status().isForbidden());
     }
 }

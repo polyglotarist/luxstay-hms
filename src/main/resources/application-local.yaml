@@ -9,3 +9,7 @@ spring:
     open-in-view: false
   flyway:
     enabled: true
+
+app:
+  jwt:
+    secret: ${APP_JWT_SECRET:dGVzdC1zZWNyZXQtZm9yLWxvY2FsLWFuZC1jaS0zMmI=}

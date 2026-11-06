@@ -5,3 +5,8 @@ spring:
     import: optional:file:.env[.properties]
   profiles:
     default: local
+
+app:
+  jwt:
+    secret: ${APP_JWT_SECRET}
+    ttl: PT2H

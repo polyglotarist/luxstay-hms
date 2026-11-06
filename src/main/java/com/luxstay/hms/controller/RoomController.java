@@ -15,6 +15,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 import java.net.URI;
 
@@ -27,6 +28,7 @@ public class RoomController {
     private final RoomService roomService;
 
     @PostMapping
+    @PreAuthorize("hasAnyRole('ADMIN','MANAGER')")
     @Operation(summary = "Create a room")
     @ApiResponse(responseCode = "201", description = "Room created")
     @ApiResponse(responseCode = "409", description = "Room number already exists")
@@ -49,6 +51,7 @@ public class RoomController {
     }
 
     @PatchMapping("/{id}/status")
+    @PreAuthorize("hasAnyRole('ADMIN','MANAGER')")
     @Operation(summary = "Change a room's status")
     public RoomResponse updateStatus(@PathVariable Long id,
                                      @Valid @RequestBody UpdateRoomStatusRequest request) {

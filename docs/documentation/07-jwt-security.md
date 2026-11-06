@@ -1,4 +1,4 @@
-# Step 7 Documentation — JWT security, users and roles
+# Step 7 Documentation — JWT security, users and roles ✅
 
 Users log in with email and password, receive a token (JWT), and send it with every request. Each endpoint allows only certain roles.
 
@@ -432,6 +432,8 @@ Users log in with email and password, receive a token (JWT), and send it with ev
     - Click **Authorize** (top right), paste the token, then click **Authorize → Close**
     - `GET /api/v1/rooms` → 200. Log out via **Authorize → Logout** → 401
     - *Log in as `guest@luxstay.test` and try `POST /api/v1/rooms` → 403.*
+    - *To switch user, click **Authorize → Logout** first; while authorized, the dialog has no input box, so the old token keeps being sent.*
+    - *A JWT always starts with `eyJ`. A 401 with `Malformed token` means part of the token was lost when copying.*
 
 21. Commit, tick Step 7 in `README.md`, push and merge:
     ```bash

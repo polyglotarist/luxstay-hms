@@ -9,6 +9,7 @@ import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
+import org.springframework.security.authentication.BadCredentialsException;
 
 import java.time.Instant;
 import java.util.LinkedHashMap;
@@ -27,6 +28,11 @@ public class GlobalExceptionHandler {
     public ProblemDetail handleBusinessRule(BusinessRuleException ex) {
         log.warn("Business rule rejected: {}", ex.getMessage());
         return problem(HttpStatus.CONFLICT, "Business rule violated", ex.getMessage());
+    }
+
+    @ExceptionHandler(BadCredentialsException.class)
+    public ProblemDetail handleBadCredentials(BadCredentialsException ex) {
+        return problem(HttpStatus.UNAUTHORIZED, "Authentication failed", ex.getMessage());
     }
 
     @ExceptionHandler(ObjectOptimisticLockingFailureException.class)
